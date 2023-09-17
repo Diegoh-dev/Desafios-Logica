@@ -150,9 +150,18 @@ console.log(smash(["this", "is", "a", "really", "long", "sentence"]));
 console.log(smash(["hello", "world"]));
 
 
+/*
+Implemente uma função que converta o valor booleano fornecido em sua representação de string.
 
+Nota: Somente entradas válidas serão fornecidas.
+*/
 
+function booleanToString(b){
+  //your code here
+  // return b ? 'true' : 'false'
 
+  return b.toString();
+}
 
 
 
