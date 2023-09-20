@@ -11,32 +11,38 @@ Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 */
 
-function toJadenCase(frase) {
+// function toJadenCase(frase) {
 
-    const arrayFrase = frase.split(' ')
+//     const arrayFrase = frase.split(' ')
 
-    const newFrase = arrayFrase.map((palavra)=>{
-        return palavra.charAt(0).toUpperCase() + palavra.slice(1)     
-    })
+//     const newFrase = arrayFrase.map((palavra)=>{
+//         return palavra.charAt(0).toUpperCase() + palavra.slice(1)     
+//     })
 
-    console.log(arrayFrase)
+//     console.log(arrayFrase)
 
-    return newFrase.join(' ')
-    //...
-};
+//     return newFrase.join(' ')
+//     //...
+// };
 
-console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
+// console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
 
-// String.prototype.toJadenCase = function () {
+String.prototype.toJadenCase = function () {
   
-//     var frase = "How can mirrors be real if our eyes aren't real"
-   
-//       const arrayFrase = frase.split(' ')
+    // var frase = "How can mirrors be real if our eyes aren't real"
+   //   this vai referencia a string que sera passado no toJadenCase
+      const arrayFrase = this.split(' ')
   
-//       const newFrase = arrayFrase.map((palavra)=>{
-//           return palavra.charAt(0).toUpperCase() + palavra.slice(1)     
-//       })
+      const newFrase = arrayFrase.map((palavra)=>{
+          return palavra.charAt(0).toUpperCase() + palavra.slice(1)     
+      })
+
+      
   
   
-//       return newFrase.join(' ')
-//   };
+      return newFrase.join(' ')
+  };
+
+  const frase = "isso é um exemplo de jaden case";
+  const jadenCaseFrase = frase.toJadenCase();
+  console.log(jadenCaseFrase); // 
