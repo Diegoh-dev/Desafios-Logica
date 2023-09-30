@@ -51,3 +51,20 @@ function compareTriplets(alice, bob) {
   return pontos;
 }
 console.log("retorno função:", compareTriplets(alice, bob));
+
+// essa seria a forma como a chat gpt resolveu o exercicio
+function compareTripletsGPT(alice, bob) {
+    let aliceScore = 0;
+    let bobScore = 0;
+  
+    for (let i = 0; i < alice.length; i++) {
+      if (alice[i] > bob[i]) {
+        aliceScore++;
+      } else if (alice[i] < bob[i]) {
+        bobScore++;
+      }
+    }
+  
+    return [aliceScore, bobScore];
+  }
+  
